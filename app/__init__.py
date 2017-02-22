@@ -6,7 +6,7 @@ Created on 2015-06-16
 '''
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from app.config import DATABASE_URI, WEIXIN_TOKEN
+from app.config import WEIXIN_TOKEN
 from flask_weixin import Weixin
 
 
@@ -17,12 +17,6 @@ DEV_MODE = True  # 开发模式
 app = Flask(__name__)
 app.secret_key = 'your_session_for_atool'
 app.config['MAX_CONTENT_LENGTH'] = 1024 # max filesize 1 kb
-
-
-# 初始化sqlalchemy数据库信息
-# app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI  # 'mysql://root:root@127.0.0.1:3306/atool-weixin'
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-# db = SQLAlchemy(app)
 
 
 # weixin 
